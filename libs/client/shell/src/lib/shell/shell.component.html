@@ -1,0 +1,19 @@
+<nz-layout>
+    <nz-header>header</nz-header>
+    <nz-layout>
+        <nz-sider nzWidth="200px" nzTheme="light">
+            <ul nz-menu nzTheme="light" nzMode="inline">
+                <ng-container *ngFor='let menu of menus'>
+                    <li nz-menu-item>
+                        <span nz-icon [nzType]="menu.icon"></span>
+                        <span>{{menu.title}}</span>
+                    </li>
+                </ng-container>
+            </ul>
+        </nz-sider>
+        <nz-content>
+            <div class="inner-content">Content</div>
+        </nz-content>
+    </nz-layout>
+    <nz-footer>footer</nz-footer>
+</nz-layout>

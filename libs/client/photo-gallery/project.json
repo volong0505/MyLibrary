@@ -1,0 +1,9 @@
+{
+  "name": "photo-gallery",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/client/photo-gallery/src",
+  "prefix": "my-library",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}

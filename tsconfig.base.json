@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@my-library/photo-gallery": ["libs/client/photo-gallery/src/index.ts"],
+      "@my-library/shell": ["libs/client/shell/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
