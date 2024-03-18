@@ -9,6 +9,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { AuthGuardService, AuthService } from "@my-library/auth";
+import { EffectsModule } from "@ngrx/effects";
 
 @NgModule({
     imports: [
@@ -19,13 +21,19 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
         NzMenuModule,
         NzIconModule,
         NzBreadCrumbModule,
-        NzGridModule
+        NzGridModule,
+        EffectsModule.forRoot([
+            AuthGuardService
+        ])
     ],
     declarations: [
         ShellComponent
     ],
     exports: [
         ClientShellRouterModule
+    ],
+    providers: [
+        AuthService
     ]
 })
 export class ClientShellModule {}

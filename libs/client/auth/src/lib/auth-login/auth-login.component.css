@@ -1,0 +1,36 @@
+
+:host {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .login-form {
+    transform: translateY(-20%);
+    width: 80%;
+    max-width: 400px;
+    margin: 200px auto;
+    padding: 19px 19px 36px;
+    background-color: #f3f3f3;
+    box-shadow: 0 1em 2em 0.1px #bbb;
+  }
+  
+  .login-form-margin {
+    margin-bottom: 16px;
+  }
+  
+  .login-form-forgot {
+    float: right;
+  }
+  
+  .login-form-button {
+    width: 100%;
+  }
+  

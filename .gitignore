@@ -42,3 +42,5 @@ Thumbs.db
 .angular
 
 *.package-lock.json
+## ENV files
+*.env

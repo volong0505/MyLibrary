@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@my-library/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@my-library/auth": ["libs/client/auth/src/index.ts"],
+      "@my-library/mongo": ["libs/infra/mongo/src/index.ts"],
       "@my-library/photo-gallery": ["libs/client/photo-gallery/src/index.ts"],
       "@my-library/shell": ["libs/client/shell/src/index.ts"]
     }

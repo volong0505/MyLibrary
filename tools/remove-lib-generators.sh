@@ -1,0 +1,1 @@
+npx nx g rm shared-store --dryRun

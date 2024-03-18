@@ -1,0 +1,1 @@
+npx nx g @nx/angular:component auth-login --module=auth.module.ts --dryRun 

@@ -1,0 +1,1 @@
+npx nx g @nrwl/angular:ngrx --module=libs/client/auth/src/lib/auth.module.ts --dryRun
