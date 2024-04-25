@@ -1,0 +1,51 @@
+.content {
+    min-height: 700px;
+}
+
+.container {
+    position: relative;
+}
+
+img {
+    display: block;
+    width: 100%;
+    padding: .2em 0;
+    cursor: pointer;
+}
+
+.avatar-group {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .2s ease;
+    padding: 0 0 4px 4px;
+}
+
+.actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .2s ease;
+    padding: 6px 4px 0 0;
+    text-align: right;
+}
+
+button {
+    background-color: #f5eeed;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 .2em;
+}
+
+.container:hover .actions {
+    opacity: 1;
+}
+
+.container:hover .avatar-group {
+    opacity: 1;
+}

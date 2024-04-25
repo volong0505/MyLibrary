@@ -1,0 +1,37 @@
+<div class="container">
+    <nz-tabset  [nzTabBarExtraContent]="extraTemplate">
+      
+        <nz-tab  [nzTitle]="Photos">
+          <ng-template #Photos>
+            <span nz-icon nzType="picture"></span>
+            Photos
+          </ng-template>
+          <my-library-photo-gallery-photos></my-library-photo-gallery-photos>
+        </nz-tab>
+
+        <nz-tab  [nzTitle]="Favourites">
+          <ng-template #Favourites>
+            <span nz-icon nzType="heart"></span>
+            Favourites
+          </ng-template>
+        </nz-tab>
+
+        <nz-tab  [nzTitle]="Folder">
+          <ng-template #Folder>
+            <span nz-icon nzType="lock"></span>
+            Locked Folder
+          </ng-template>
+        </nz-tab>
+
+        <nz-tab  [nzTitle]="Bin">
+          <ng-template #Bin>
+            <span nz-icon nzType="delete"></span>
+            Bin
+          </ng-template>
+        </nz-tab>
+
+      </nz-tabset>
+      <ng-template #extraTemplate>
+        <my-library-photo-gallery-upload></my-library-photo-gallery-upload>
+      </ng-template>
+</div>

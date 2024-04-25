@@ -11,7 +11,7 @@ import { jwtConstants } from "./constants";
         JwtModule.register({
             global: true, // We don't need to import the JwtModule anywhere else in our application
             secret: jwtConstants.secret,
-            signOptions: { expiresIn: '60s'}
+            signOptions: { expiresIn: '10000s'}
         })
     ],
     providers: [

@@ -1,0 +1,24 @@
+<div nz-row [nzGutter]="6">
+    <div nz-col class="gutter-row" [nzSpan]="6" *ngFor="let item of list">
+        <ng-container *ngFor="let photo of item">
+            <div class="container">
+                <img (click)="previewPhoto(photo.file_name)" [src]="getResizeUrl(photo.file_name)" />
+
+                <div class="actions">
+                    <button ><span nz-icon nzType="heart" (click)="favoriting(photo.file_name)"></span></button>
+
+                    <button ><span nz-icon nzType="download"></span></button>
+
+                    <button ><span nz-icon nzType="delete"></span></button>
+
+                </div>
+
+                <div class="avatar-group">
+                    <nz-avatar-group>
+                        <nz-avatar nzIcon="user" [nzSize]="40" nzSrc="http://localhost:3333/api/photo-gallery/get-resize-file?file_name=003~17a7170c57-55c1-4e5c-aff7-ff3ffa6c2f67.jpg"></nz-avatar>
+                    </nz-avatar-group>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

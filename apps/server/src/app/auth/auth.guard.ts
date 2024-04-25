@@ -24,6 +24,7 @@ export class AuthGuard implements CanActivate {
 
         const request = context.switchToHttp().getRequest();
         const token = this.extractTokenFromHeader(request);
+
         if (!token) {
             throw new UnauthorizedException("Username or password is incorrect")
         }
@@ -43,7 +44,8 @@ export class AuthGuard implements CanActivate {
     }
 
     private extractTokenFromHeader(request: Request): string | undefined {
-        const [type, token] = request.headers.authorization?.split(' ') ?? [];
-        return type === 'Bearer' ? token : undefined;
+        const [type, token] = request.headers.cookie?.split('=') ?? [];
+
+        return type.trim() === 'access_token' ? token : undefined;
     }
 }

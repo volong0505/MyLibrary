@@ -6,7 +6,13 @@ const routes: Routes = [
   {
     path: '',
     component: ShellComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
+    children: [
+      {
+        path: 'photo-gallery',
+        loadChildren: () => import('@my-library/photo-gallery').then(m => m.PhotoGalleryModule)
+      }
+    ]
   },
   {
     path: 'login',

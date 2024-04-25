@@ -1,0 +1,1 @@
+export const UPLOAD_PHOTOS_API = 'photo-gallery/upload';

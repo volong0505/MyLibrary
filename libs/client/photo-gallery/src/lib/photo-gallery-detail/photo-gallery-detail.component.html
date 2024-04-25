@@ -1,0 +1,23 @@
+<div class="container">
+    <nz-skeleton [nzParagraph]="{ rows: 10}" [nzLoading]="isLoading">
+
+    <div class="image" *ngIf="!!this.photo">
+        <img 
+      nz-image
+      [nzSrc]="getUrl()"
+      alt=""
+    />
+    </div>
+    <div class="divider">
+        <nz-divider ></nz-divider>
+    </div>
+    <!-- <div>
+        <p><span nz-icon nzType="file-image" nzTheme="outline"></span>
+            {{this.photo.file_name}}
+            <br>
+            {{this.photo.size}}
+        
+        </p>
+    </div> -->
+    </nz-skeleton>
+</div>

@@ -1,0 +1,31 @@
+.container {
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #fff;
+    min-height: 800px;
+}
+
+img {
+    width: 100%;
+    padding: 1em 1em 0 1em;
+}
+
+.divider {
+    padding: 0 2em;
+}
+
+p {
+    font-size: .5em;
+    color: rgb(60, 64, 67);
+    word-wrap: break-word;
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.00625em;
+    font-weight: 400;
+}
+
+span{
+    padding: 0 .5em;
+    font-size: 1em;
+};

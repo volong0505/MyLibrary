@@ -1,7 +1,7 @@
-import { PhotoGallerySchemaFeature } from './photo-gallery';
+import { PhotoGallerySchemaFeature } from './photo-gallery/schema';
 import { UsersSchemaFeature } from './users';
 
-export * from './photo-gallery';
+export * from './photo-gallery/schema';
 export * from './users';
 export * from './mongo.module';
 

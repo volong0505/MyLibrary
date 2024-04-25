@@ -11,6 +11,6 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/lib/photo-gallery"],
+  "include": ["src/**/*.ts", "src/lib/photo-gallery", "../../../apps/server/src/app/photo-gallery/infrastructure/repositories/photo-gallery.repository-impl.ts"],
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
 }

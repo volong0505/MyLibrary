@@ -4,12 +4,12 @@ import { IsNotEmpty } from 'class-validator';
 export class LoginRequest {
     
     @IsNotEmpty()
-    username!: string;
+    username: string;
 
     @IsNotEmpty()
-    password!: string;
+    password: string;
 
-    remember!: boolean;
+    remember: boolean;
 }
 
 export interface LoginReponse {

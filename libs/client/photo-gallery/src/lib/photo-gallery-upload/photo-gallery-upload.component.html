@@ -1,0 +1,11 @@
+<div>
+
+    <button nz-button nzType="primary"
+        nzShape="round"
+        (click)="fileInput.click()">
+        <span nz-icon nzType="upload"></span>
+        Upload
+    </button>
+
+    <input style="display: none" type="file" multiple (change)="fileChangeEvent($event)" #fileInput />
+</div>

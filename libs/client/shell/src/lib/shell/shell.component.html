@@ -1,19 +1,32 @@
+
+
 <nz-layout>
-    <nz-header>header</nz-header>
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+      <div class="logo"></div>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <ng-container *ngFor='let menu of menus'>
+            <li nz-menu-item routerLink="{{menu.url}}">
+                <span nz-icon [nzType]="menu.icon"></span>
+                <span>{{menu.title}}</span>
+            </li>
+        </ng-container>
+    </ul>
+    </nz-sider>
     <nz-layout>
-        <nz-sider nzWidth="200px" nzTheme="light">
-            <ul nz-menu nzTheme="light" nzMode="inline">
-                <ng-container *ngFor='let menu of menus'>
-                    <li nz-menu-item>
-                        <span nz-icon [nzType]="menu.icon"></span>
-                        <span>{{menu.title}}</span>
-                    </li>
-                </ng-container>
-            </ul>
-        </nz-sider>
-        <nz-content>
-            <div class="inner-content">Content</div>
-        </nz-content>
+      <nz-header>
+        <span
+          class="trigger"
+          nz-icon
+          [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+          (click)="isCollapsed = !isCollapsed"
+        ></span>
+      </nz-header>
+      <nz-content>
+        <div class="inner-content">
+            <router-outlet></router-outlet>
+        </div>
+      </nz-content>
+      <nz-footer>My Library Dev
+      </nz-footer>
     </nz-layout>
-    <nz-footer>footer</nz-footer>
-</nz-layout>
+  </nz-layout>

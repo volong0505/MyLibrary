@@ -1,0 +1,6 @@
+.container {
+    border-radius: 8px;
+    background-color: #fff;
+    min-height: 800px;
+    padding: 0 1em
+}

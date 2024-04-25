@@ -11,6 +11,7 @@ export class AuthGuardService {
     ) {}
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
+        console.log('can Active');
         return this.authService.getUser()
             .pipe(
                 catchError(async error => {

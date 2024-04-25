@@ -7,11 +7,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './shell.component.css',
 })
 export class ShellComponent {
+  isCollapsed = false;
+
+  
   menus = [
     {
       title: 'Photo Gallery',
       icon: 'picture',
-      selected: false
+      selected: false,
+      url: 'photo-gallery'
     }
   ]
 }
