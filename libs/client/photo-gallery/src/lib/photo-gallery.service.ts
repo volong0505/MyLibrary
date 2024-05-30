@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { GetDetailPhotoRequest, GetDetailPhotoResponse, GetListPhotosRequest, GetListPhotosResponse, PHOTO_GALLERY_GET_DETAIL_API, PHOTO_GALLERY_GET_LIST_API, UPLOAD_PHOTOS_API } from '@my-library/api-interfaces';
+import { FavoringPhotosRequest, GetDetailPhotoRequest, GetDetailPhotoResponse, GetListPhotosRequest, GetListPhotosResponse, PHOTO_GALLERY_FAVORING_PHOTOS_API, PHOTO_GALLERY_GET_DETAIL_API, PHOTO_GALLERY_GET_LIST_API, UPLOAD_PHOTOS_API } from '@my-library/api-interfaces';
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
@@ -39,5 +39,9 @@ export class PhotoGalleryService {
                 return response
             })
         )
+    }
+
+    favoring(dto: FavoringPhotosRequest) {
+        return this.http.post(PHOTO_GALLERY_FAVORING_PHOTOS_API, dto, { withCredentials: true})
     }
 }

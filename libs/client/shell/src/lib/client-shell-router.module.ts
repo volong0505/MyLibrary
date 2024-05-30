@@ -9,6 +9,11 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
     children: [
       {
+        path: '',
+        redirectTo: 'photo-gallery',
+        pathMatch: 'full'
+      },
+      {
         path: 'photo-gallery',
         loadChildren: () => import('@my-library/photo-gallery').then(m => m.PhotoGalleryModule)
       }

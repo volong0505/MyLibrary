@@ -66,7 +66,7 @@ export class PhotoGalleryController {
                 .catch(err => { throw new BadRequestException(err) });
     }
 
-    @Put(PHOTO_GALLERY_FAVORING_PHOTOS_API)
+    @Post(PHOTO_GALLERY_FAVORING_PHOTOS_API)
     favoringPhotos(@Body() body: FavoringPhotosRequest): Promise<FavoringPhotosResponse> {
         return this.service.favoringPhotos(body)
     }

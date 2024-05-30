@@ -11,11 +11,15 @@ export class FavoringPhotosHandler implements ICommandHandler<FavoringPhotoComma
     private readonly repository: PhotoGalleryRepository
 
 
-    async execute(command: FavoringPhotoCommand): Promise<void> {
+    async execute(command: FavoringPhotoCommand): Promise<{message: string}> {
         const photo = await this.repository.findOneByName(command.dto.file_name);
 
         if (!photo)
             throw new NotFoundException(PhotoGalleryErrorMessage.PHOTO_IS_NOT_FOUND);;
-        photo.favorite()
+        photo.favorite();
+
+        return {
+            message: 'This photo was favored!'
+        }
     }
 }

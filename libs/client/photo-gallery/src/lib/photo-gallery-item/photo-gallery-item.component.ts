@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { PHOTO_GALLERY_GET_RESIZE_API } from '@my-library/api-interfaces';
 import { PhotosEntity, loadDetailPhoto, loadlistPhotos, selectDetailPhoto } from '@my-library/photo-gallery';
 import { Store } from '@ngrx/store';
+import { PhotoGalleryService } from '../photo-gallery.service';
 
 const host = 'http://localhost:3333/api/'
 @Component({
@@ -16,7 +17,8 @@ export class PhotoGalleryItemComponent {
   current_file_name!: string;
 
   constructor(
-    private readonly store: Store
+    private readonly store: Store,
+    private readonly service: PhotoGalleryService
   ) {
     this.store.select(selectDetailPhoto).subscribe(state => {
       this.current_file_name = state.file_name
@@ -39,7 +41,8 @@ export class PhotoGalleryItemComponent {
   }
 
   favoriting(file_name: string) {
-    alert(file_name)
+    return this.service.favoring({file_name})
+      .subscribe(e => { console.log(e)})
   }
 
 
