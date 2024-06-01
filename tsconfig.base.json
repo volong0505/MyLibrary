@@ -15,6 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@my-library/admin-client-auth": ["libs/admin/client/auth/src/index.ts"],
+      "@my-library/admin-client-photo-gallery": [
+        "libs/admin/client/photo-gallery/src/index.ts"
+      ],
+      "@my-library/admin-client-shell": [
+        "libs/admin/client/shell/src/index.ts"
+      ],
       "@my-library/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@my-library/auth": ["libs/client/auth/src/index.ts"],
       "@my-library/mongo": ["libs/infra/mongo/src/index.ts"],
