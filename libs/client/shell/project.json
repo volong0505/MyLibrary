@@ -1,9 +1,0 @@
-{
-  "name": "shell",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/client/shell/src",
-  "prefix": "my-library",
-  "tags": [],
-  "projectType": "library",
-  "targets": {}
-}
