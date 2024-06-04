@@ -1,1 +1,1 @@
-export * from './lib/admin-client-auth/admin-client-auth.component';
+export * from './lib'

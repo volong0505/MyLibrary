@@ -24,7 +24,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FilesInterceptor } from '@nestjs/platform-express';
-import { Config } from 'apps/server/config';
+import { Config } from 'apps/admin/server/config';
 import fs from 'fs';
 import { diskStorage } from 'multer';
 import { parse } from 'path';

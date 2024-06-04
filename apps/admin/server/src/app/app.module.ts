@@ -2,7 +2,7 @@ import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 
 import { APP_GUARD } from '@nestjs/core';
 import { MulterModule } from '@nestjs/platform-express';
-import { Config } from 'apps/server/config';
+import { Config } from 'apps/admin/server/config';
 import { MongoModule } from 'libs/infra/mongo/src/lib';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';

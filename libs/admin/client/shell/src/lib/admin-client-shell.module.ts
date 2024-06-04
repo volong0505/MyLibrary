@@ -7,12 +7,13 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from "ng-zorro-antd/menu";
-import { ClientShellRouterModule } from "./admin-client-shell-router.module";
-import { AdminClientShellComponent } from "..";
+import { AdminClientShellRouterModule } from "./admin-client-shell-router.module";
+import { AdminClientAuthGuardService, AdminClientAuthService } from "@my-library/admin-client-auth";
+import { AdminClientShellComponent } from "./admin-client-shell/admin-client-shell.component";
 
 @NgModule({
     imports: [
-        ClientShellRouterModule,
+        AdminClientShellRouterModule,
         CommonModule,
         NzButtonModule,
         NzLayoutModule,
@@ -21,17 +22,17 @@ import { AdminClientShellComponent } from "..";
         NzBreadCrumbModule,
         NzGridModule,
         EffectsModule.forRoot([
-            AuthGuardService
+            AdminClientAuthGuardService
         ])
     ],
     declarations: [
         AdminClientShellComponent
     ],
     exports: [
-        ClientShellRouterModule
+        AdminClientShellRouterModule
     ],
     providers: [
-        AuthService
+        AdminClientAuthService
     ]
 })
-export class ClientShellModule {}
+export class AdminClientShellModule {}

@@ -1,11 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AdminClientShellComponent } from './admin-client-shell/admin-client-shell.component';
+import { AdminClientAuthGuardService } from '@my-library/admin-client-auth'
 const routes: Routes = [
   {
     path: '',
     component: AdminClientShellComponent,
-    canActivate: [AuthGuardService],
+    canActivate: [AdminClientAuthGuardService],
     children: [
       {
         path: '',
@@ -14,13 +15,13 @@ const routes: Routes = [
       },
       {
         path: 'photo-gallery',
-        loadChildren: () => import('@my-library/photo-gallery').then(m => m.PhotoGalleryModule)
+        loadChildren: () => import('@my-library/admin-client-photo-gallery').then(m => m.AdminClientPhotoGalleryModule)
       }
     ]
   },
   {
     path: 'login',
-    loadChildren: () => import("@my-library/auth").then((m) => m.AuthModule)
+    loadChildren: () => import("@my-library/admin-client-auth").then((m) => m.AdminClientAuthModule)
   }
 ]
 
@@ -30,4 +31,4 @@ const routes: Routes = [
     ],
     exports: [RouterModule]
 })
-export class ClientShellRouterModule {}
+export class AdminClientShellRouterModule {}

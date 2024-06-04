@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'lib-admin-client-photo-gallery-tabs',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './admin-client-photo-gallery-tabs.component.html',
   styleUrl: './admin-client-photo-gallery-tabs.component.css',
 })

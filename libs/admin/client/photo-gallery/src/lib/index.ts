@@ -1,1 +1,1 @@
-export * from './photo-gallery.module'
+export * from './admin-client-photo-gallery.module'

@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'lib-admin-client-shell',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './admin-client-shell.component.html',
   styleUrl: './admin-client-shell.component.css',
 })

@@ -7,7 +7,7 @@ const headers = new HttpHeaders();
 headers.append('Accept', 'application/json');
 
 @Injectable()
-export class AuthService {
+export class AdminClientAuthService {
     constructor(
         private readonly http: HttpClient
     ) {

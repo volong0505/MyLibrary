@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormGroup, FormControl, Validators, NonNullableFormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { LoginRequest } from '@my-library/api-interfaces';
 import { Store } from '@ngrx/store';
 import { login } from '../+state/auth.actions';
@@ -8,8 +7,6 @@ import { selectError, selectIsLoading } from '../+state/auth.selectors';
 
 @Component({
   selector: 'lib-admin-client-auth-login',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './admin-client-auth-login.component.html',
   styleUrl: './admin-client-auth-login.component.css',
 })
