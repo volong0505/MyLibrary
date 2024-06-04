@@ -5,7 +5,7 @@ import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
 @Injectable()
-export class PhotoGalleryService {
+export class AdminClientPhotoGalleryService {
     constructor(
         private readonly http: HttpClient
     ){}

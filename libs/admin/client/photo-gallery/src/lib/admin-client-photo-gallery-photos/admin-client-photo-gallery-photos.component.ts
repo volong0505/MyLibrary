@@ -8,8 +8,6 @@ import { selectPhotoGalleryLoaded, selectAllPhotoGallery } from '../+state/photo
 
 @Component({
   selector: 'lib-admin-client-photo-gallery-photos',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './admin-client-photo-gallery-photos.component.html',
   styleUrl: './admin-client-photo-gallery-photos.component.css',
 })

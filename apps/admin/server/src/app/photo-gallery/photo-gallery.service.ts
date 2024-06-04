@@ -12,7 +12,7 @@ import {
 } from '@my-library/api-interfaces';
 import { FavoringPhotoCommand } from './commands/impl/favoring-photo.command';
 import { PhotoGalleryEnity } from '@my-library/mongo';
-import { Config } from 'apps/server/config';
+import { Config } from 'apps/admin/server/config';
 import fs from 'fs';
 import { SizeFileUtil } from '@my-library/utils';
 import { FindPhotoByNameResult } from './dtos';

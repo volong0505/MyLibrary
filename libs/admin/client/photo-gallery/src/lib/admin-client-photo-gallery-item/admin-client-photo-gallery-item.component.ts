@@ -5,13 +5,12 @@ import { Store } from '@ngrx/store';
 import { loadDetailPhoto } from '../+state/photo-gallery.actions';
 import { PhotosEntity } from '../+state/photo-gallery.models';
 import { selectDetailPhoto } from '../+state/photo-gallery.selectors';
-import { PhotoGalleryService } from '../photo-gallery.service';
+import { AdminClientPhotoGalleryService } from '../admin-client-photo-gallery.service';
 const host = 'http://localhost:3333/api/'
 
 @Component({
   selector: 'lib-admin-client-photo-gallery-item',
-  standalone: true,
-  imports: [CommonModule],
+
   templateUrl: './admin-client-photo-gallery-item.component.html',
   styleUrl: './admin-client-photo-gallery-item.component.css',
 })
@@ -22,7 +21,7 @@ export class AdminClientPhotoGalleryItemComponent {
 
   constructor(
     private readonly store: Store,
-    private readonly service: PhotoGalleryService
+    private readonly service: AdminClientPhotoGalleryService
   ) {
     this.store.select(selectDetailPhoto).subscribe(state => {
       this.current_file_name = state.file_name

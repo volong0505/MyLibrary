@@ -2,14 +2,14 @@ import { Injectable, inject } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { switchMap, catchError, of, map } from 'rxjs';
 import * as PhotoGalleryActions from './photo-gallery.actions';
-import { PhotoGalleryService } from '../photo-gallery.service';
+import { AdminClientPhotoGalleryService } from '../admin-client-photo-gallery.service';
 import { GetDetailPhotoResponse, GetListPhotosResponse } from '@my-library/api-interfaces';
 @Injectable()
 export class PhotoGalleryEffects {
   private actions$ = inject(Actions);
 
   constructor(
-    private readonly service: PhotoGalleryService
+    private readonly service: AdminClientPhotoGalleryService
   ) {}
 
   getListPhoto$ = createEffect(() =>

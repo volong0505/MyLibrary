@@ -3,13 +3,11 @@ import { CommonModule } from '@angular/common';
 import { GetListPhotosRequest } from '@my-library/api-interfaces';
 import { Store } from '@ngrx/store';
 import { loadlistPhotos } from '../+state/photo-gallery.actions';
-import { PhotoGalleryService } from '../photo-gallery.service';
+import { AdminClientPhotoGalleryService } from '../admin-client-photo-gallery.service';
 import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'lib-admin-client-photo-gallery-upload',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './admin-client-photo-gallery-upload.component.html',
   styleUrl: './admin-client-photo-gallery-upload.component.css',
 })
@@ -23,7 +21,7 @@ export class AdminClientPhotoGalleryUploadComponent {
   }
   constructor(
     private msg: NzMessageService,
-    private service: PhotoGalleryService,
+    private service: AdminClientPhotoGalleryService,
     private store: Store
   ) { }
 

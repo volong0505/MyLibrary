@@ -5,7 +5,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, catchError, switchMap, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '../services';
+import { AdminClientAuthService } from '../services';
 
 @Injectable()
 export class AuthEffects {
@@ -44,7 +44,7 @@ export class AuthEffects {
 
   constructor(
     private action$: Actions,
-    private authService: AuthService,
+    private authService: AdminClientAuthService,
     private router: Router,
     private route: ActivatedRoute
   ) {
