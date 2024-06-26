@@ -9,7 +9,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
 import { NZ_I18N, vi_VN } from 'ng-zorro-antd/i18n';
 import { apiInterceptorProvider } from './shared';
-import { AdminClientShellModule } from '@my-library/admin-client-shell'
+import { AdminClientShellModule } from '@my-library/admin-client-shell';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

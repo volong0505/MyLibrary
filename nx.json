@@ -71,5 +71,14 @@
       "style": "css"
     }
   },
-  "nxCloudAccessToken": "OWI0MzFkODktZjUzMC00MThjLWI0Y2EtZmQ3ZTJmZGEzMTgwfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "OWI0MzFkODktZjUzMC00MThjLWI0Y2EtZmQ3ZTJmZGEzMTgwfHJlYWQtd3JpdGU=",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "useDaemonProcess": false
+      }
+    }
+  }
 }
