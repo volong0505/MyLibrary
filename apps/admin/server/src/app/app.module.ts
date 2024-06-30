@@ -2,7 +2,6 @@ import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 
 import { APP_GUARD } from '@nestjs/core';
 import { MulterModule } from '@nestjs/platform-express';
-import { Config } from 'apps/admin/server/config';
 import { MongoModule } from 'libs/infra/mongo/src/lib';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -12,6 +11,7 @@ import { PhotoGalleryModule } from './photo-gallery/photo-gallery.module';
 import { UsersModule } from './users/users.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { LoggerMiddleware } from './_common';
+import { Config } from '../../config';
 const photo_gallery_folder = `${Config.WORK_DIR}${Config.PHOTOS_UPLOAD_PATH}`;
 
 @Module({

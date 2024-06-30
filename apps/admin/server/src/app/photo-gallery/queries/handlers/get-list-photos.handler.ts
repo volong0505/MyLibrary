@@ -4,7 +4,6 @@ import clc from 'cli-color';
 import { GetListPhotosQuery } from '../impl';
 import { Inject } from '@nestjs/common';
 import { PhotoGalleryQuery } from '../photo-gallery.query';
-const port = process.env.PORT || 3333;
 import { InjectionToken } from '../../photo-gallery.injection-token';
 import { FindPhotosResult } from '../../dtos';
 

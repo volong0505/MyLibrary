@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { PhotoGalleryQuery } from '../../queries/photo-gallery.query';
 import { FindPhotoByNameResult, FindPhotosResult } from '../../dtos';
 import { PhotoGalleryEnity } from '@my-library/mongo';

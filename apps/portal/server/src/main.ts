@@ -12,17 +12,14 @@ import { Config } from '../config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  
   app.use(bodyParser.json({ limit: '50mb' }));
   app.use(cookieParser());
   app.useGlobalPipes(new ValidationPipe());
 
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-  app.enableCors({
-    origin: ['http://localhost:4200'],
-    credentials: true,
-  });
-  const port = Config.PORT || 3333;
+  const port = Config.PORT || 3334;
   await app.listen(port);
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
@@ -30,3 +27,4 @@ async function bootstrap() {
 }
 
 bootstrap();
+ 

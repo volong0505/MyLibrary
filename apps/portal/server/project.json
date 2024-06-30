@@ -1,0 +1,24 @@
+{
+  "name": "portal-server",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/portal/server/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "portal-server:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "portal-server:build:development"
+        },
+        "production": {
+          "buildTarget": "portal-server:build:production"
+        }
+      }
+    }
+  }
+}
